@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* Estilo geral */
+
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #1e1e2f, #3a3a5f);
@@ -78,8 +78,7 @@ h2 {
     margin-bottom: 1rem;
 }
 
-/* Tabuleiro */
-/* Tabuleiro */
+
 #gameBoard {
     display: grid;
     grid-template-columns: repeat(3, 8rem); /* Aumenta o tamanho das células */
