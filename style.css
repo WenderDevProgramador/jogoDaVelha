@@ -15,10 +15,14 @@ body {
     text-align: center;
 }
 
+main {
+    flex: 1;
+}
+
 /* Título */
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
     color: #ffd700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -75,29 +79,31 @@ h2 {
 }
 
 /* Tabuleiro */
+/* Tabuleiro */
 #gameBoard {
     display: grid;
-    grid-template-columns: repeat(3, 6rem);
-    grid-template-rows: repeat(3, 6rem);
-    gap: 0.5rem;
+    grid-template-columns: repeat(3, 8rem); /* Aumenta o tamanho das células */
+    grid-template-rows: repeat(3, 8rem);   /* Aumenta o tamanho das células */
+    gap: 0.6rem; /* Ajusta o espaçamento entre as células */
     background: #2e2e4e;
     border-radius: 12px;
-    padding: 1rem;
+    padding: 1.5rem; /* Aumenta o espaço interno do tabuleiro */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    margin-bottom: 1.5rem;
-    width: 100%;
-    max-width: 19rem;
+    margin: 0 auto; /* Garante centralização horizontal */
+    margin-bottom: 2rem; /* Ajusta o espaçamento inferior */
+    width: fit-content; /* Ajusta a largura ao conteúdo do grid */
 }
 
 #gameBoard span {
     background: #ffd700;
     display: grid;
     place-content: center;
-    font-size: 2.5rem;
+    font-size: 3rem; /* Aumenta o tamanho da fonte */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s, transform 0.2s;
 }
+
 
 #gameBoard span.cursor-pointer:hover {
     background-color: #ff4500;
@@ -120,15 +126,13 @@ h2 {
     padding: 1rem 0;
     /* Espaçamento interno */
     font-size: 0.9rem;
-    /* Tamanho menor para o rodapé */
-    position: fixed;
-    /* Fixa o rodapé na parte inferior */
-    bottom: 0;
-    /* Garante que esteja na base */
-    width: 100%;
-    /* Ocupa toda a largura */
+    /* Tamanho menor */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     /* Sombra para destaque */
+    width: 100%;
+    /* Ocupa toda a largura */
+    position: relative;
+    /* Permite posicionamento abaixo do conteúdo */
 }
 
 #rodaPe a {
